@@ -1,0 +1,75 @@
+:root {
+    --border-size: 1px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Play', sans-serif;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.lighting {
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh;
+    justify-content: center;
+    align-items: center;
+    border: var(--border-size) solid black;
+    position: relative;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.on {
+    background-color: yellow;
+    color: black;
+    border-color: black;
+}
+
+.off {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.lighting-icon {
+    font-size: 3em;
+    margin-bottom: 1vh;
+}
+
+/* Mobile L */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .lighting {
+        width: calc(100% - var(--border-size) * 2);
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .lighting {
+        width: calc(50% - var(--border-size) * 2);
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1024px) and (max-width: 1139px) {
+    .lighting {
+        width: calc(25% - var(--border-size) * 2);
+    }
+}
+
+/* Laptop L */
+@media only screen and (min-width: 1140px) {
+    .lighting {
+        width: calc(20% - var(--border-size) * 2);
+    }
+}
